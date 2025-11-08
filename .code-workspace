@@ -1,0 +1,83 @@
+{
+  // 1. Defines the folders in your workspace
+  "folders": [
+    {
+      "path": "backend"
+    },
+    {
+      "path": "frontend"
+    }
+  ],
+
+  // 2. Defines the settings for the whole workspace
+  "settings": {
+    // --- General Editor Settings ---
+    "editor.formatOnSave": true, // Enable format on save for all files
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "**/node_modules": true, // Exclude frontend dependencies
+      "**/.venv": true, // Exclude backend virtual env
+      "**/__pycache__": true // Exclude python cache
+    },
+    "files.associations": {
+      "*.css": "tailwindcss" // Associate CSS files with Tailwind
+    },
+
+    // --- Backend: Python Settings ---
+    "[python]": {
+      "editor.defaultFormatter": "charliermarsh.ruff",
+      "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit",
+        "source.fixAll": "explicit"
+      }
+    },
+
+    // --- Frontend: JavaScript / TypeScript Settings ---
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+      }
+    },
+    "[javascriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+      }
+    },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+      }
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.organizeImports": "always"
+      }
+    },
+
+    // --- Frontend: Tool Settings ---
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact"
+    ],
+    "tailwindCSS.includeLanguages": {
+      "javascript": "javascript",
+      "javascriptreact": "javascriptreact",
+      "typescript": "typescript",
+      "typescriptreact": "typescriptreact"
+    },
+    "tailwindCSS.emmetCompletions": true,
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.autoImports": true
+  }
+}
