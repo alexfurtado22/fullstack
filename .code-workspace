@@ -2,10 +2,7 @@
   // 1. Defines the folders in your workspace
   "folders": [
     {
-      "path": "backend"
-    },
-    {
-      "path": "frontend"
+      "path": "."
     }
   ],
 
